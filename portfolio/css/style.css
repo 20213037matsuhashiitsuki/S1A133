@@ -76,7 +76,7 @@ li {
 .header {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
@@ -137,6 +137,19 @@ li {
   width: 100%;
 }
 
+.header-nav-item{
+  position:relative;
+  top:0;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+
+.header-nav-item:hover {
+  top:-3px;
+}
+
 /*--------------------------------
  メインビジュアル
 ---------------------------------*/
@@ -183,6 +196,20 @@ li {
 .main-visual-text {
   flex: 1;
 }
+
+.main-visual-text{
+  position:relative;
+  top:0;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+
+.main-visual-text:hover {
+  top:-15px;
+}
+
 .main-visual-text p:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -366,6 +393,19 @@ li {
   margin-bottom: 3px;
 }
 
+.skill-item{
+  position:relative;
+  top:0;
+  padding:5px 7px;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+
+.skill-item:hover {
+  top:-10px;
+}
 /*--------------------------------
  About
 ---------------------------------*/
@@ -618,4 +658,107 @@ li {
   .article {
     padding: 50px 0;
   }
+}
+
+
+.btn05{
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+  /* display: inline-block; */
+  color: #333;
+  
+  padding: 10px 20px;
+  /* background:#eee; */
+  /* text-decoration: none;
+  outline: none; */
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transition-delay: .7s;/*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn05:hover{
+background:#333;
+color: #fff;
+}
+
+/*線の設定*/
+.btn05 span{
+  display: block;
+}
+
+/*横線の設定*/
+.btn05::before,
+.btn05::after{
+  content:"";
+  /*絶対配置で線の位置を決める*/   
+  position: absolute;
+  /*線の形状*/   
+  width: 0;
+  height: 1px;
+  background: #333;
+  /*アニメーションの指定*/
+  transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn05 span::before,
+.btn05 span::after{
+  content:"";
+  /*絶対配置で線の位置を決める*/   
+  position: absolute;
+  /*線の形状*/
+  width:1px;
+  height:0;
+  background: #333;
+  /*アニメーションの指定*/
+  transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn05:hover::before,
+.btn05:hover::after{
+  width: 100%;
+}
+.btn05:hover span::before,
+.btn05:hover span::after{
+  height: 100%;
+}
+
+/*== 左上と右下から枠線が伸びて塗に */
+
+/*横線が0.2秒送れて出現*/
+
+.btn05::before{
+  right: 0;
+  top: 0;
+  transition-delay: 0.2s;
+}
+.btn05::after{
+  left: 0;
+  bottom: 0;
+  transition-delay: 0.2s;
+}
+
+/*縦線が出現*/
+.btn05 span::before{
+  left: 0;
+  top: 0;
+}
+.btn05 span::after{
+  right: 0;
+  bottom: 0;
+}
+
+.demo1{
+  display: inline-block;
+  padding: 20px 20px;
+  border: solid 2px #fff;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.2);
+  /* color: #fff; */
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
 }
