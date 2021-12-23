@@ -210,9 +210,9 @@ li {
   top:-10px;
 }
 
-.main-visual-text p:not(:last-child) {
-  margin-bottom: 30px;
-}
+/* .main-visual-text p:not(:last-child) {
+  margin-bottom: 4px;
+} */
 
 /*--------------------------------
  Works
@@ -752,12 +752,15 @@ color: #fff;
 }
 
 .wiki{
-  /* display: inline-block; */
-  /* padding: 20px 20px;
-  border: solid 2px #fff;
-  border-radius: 3px; */
   color: #fff;
-  /* text-decoration: none;
-  font-weight: bold;
-  font-family: Helvetica, Arial, sans-serif; */
 } 
+
+.black {
+  color: black;
+}
+
+
+.logo {
+  max-width: 40%;
+  height: 50%;
+}
