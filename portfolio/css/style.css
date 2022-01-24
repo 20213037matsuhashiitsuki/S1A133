@@ -214,6 +214,10 @@ li {
   margin-bottom: 4px;
 } */
 
+/* .main-visual{
+  background-color:aqua;
+} */
+
 /*--------------------------------
  Works
 ---------------------------------*/
@@ -764,4 +768,8 @@ color: #fff;
 
 .logo {
   max-width: 40%;
+}
+
+.title btn05{
+  background-color: aquamarine;
 }
