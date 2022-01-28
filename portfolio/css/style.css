@@ -758,11 +758,12 @@ color: #fff;
 .wiki{
   color: #fff;
   /* color: black; */
-  
+  cursor: not-allowed;
 } 
 
 .black {
   color: black;
+  cursor: wait;
 }
 
 
